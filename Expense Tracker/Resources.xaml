@@ -1,0 +1,83 @@
+﻿<!-- Resources.xaml -->
+<ResourceDictionary 
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls">
+
+    <SolidColorBrush x:Key="ControlLightColorBrush" Color="#f2f2f2"/>
+    <SolidColorBrush x:Key="DisabledControlLightColorBrush" Color="#d3d3d3"/>
+    <SolidColorBrush x:Key="ControlMediumColorBrush" Color="#666666"/>
+    <SolidColorBrush x:Key="ControlDarkColorBrush" Color="#1d1d1d"/>
+
+    <Style x:Key="ModernButton" TargetType="{x:Type Button}">
+        <Setter Property="Background" Value="#1C64AD"/>
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="BorderBrush" Value="#1C64AD"/>
+        <Setter Property="Padding" Value="10,5"/>
+        <Setter Property="FontSize" Value="18"/>
+        <Setter Property="FontFamily" Value="Segoe UI"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="5"
+                            Padding="{TemplateBinding Padding}">
+                        <ContentPresenter HorizontalAlignment="Center"
+                                          VerticalAlignment="Center"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#3880d3"/>
+                            <Setter Property="BorderBrush" Value="#3880d3"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Background" Value="#1a5a99"/>
+                            <Setter Property="BorderBrush" Value="#1a5a99"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Background" Value="{StaticResource DisabledControlLightColorBrush}"/>
+                            <Setter Property="BorderBrush" Value="{StaticResource DisabledControlLightColorBrush}"/>
+                            <Setter Property="Foreground" Value="{StaticResource ControlDarkColorBrush}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="ModernTextBox" TargetType="{x:Type TextBox}">
+        <Setter Property="Background" Value="#F0F0F0" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="FontSize" Value="15" />
+        <Setter Property="FontFamily" Value="Segoe UI" />
+        <Setter Property="MinWidth" Value="200" />
+        <Setter Property="MinHeight" Value="22" />
+        <Setter Property="Foreground" Value="#2E2E2E" />
+        <Setter Property="CaretBrush" Value="#2E2E2E" />
+        <Style.Triggers>
+            <Trigger Property="IsFocused" Value="True">
+                <Setter Property="BorderThickness" Value="1" />
+                <Setter Property="BorderBrush" Value="#1C64AD" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    <Style x:Key="ModernPasswordBox" TargetType="{x:Type PasswordBox}">
+        <Setter Property="Background" Value="#F0F0F0" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="FontSize" Value="15" />
+        <Setter Property="FontFamily" Value="Segoe UI" />
+        <Setter Property="MinWidth" Value="200" />
+        <Setter Property="MinHeight" Value="22" />
+        <Setter Property="Foreground" Value="#2E2E2E" />
+        <Setter Property="CaretBrush" Value="#2E2E2E" />
+        <Style.Triggers>
+            <Trigger Property="IsFocused" Value="True">
+                <Setter Property="BorderThickness" Value="1" />
+                <Setter Property="BorderBrush" Value="#1C64AD" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+</ResourceDictionary>
