@@ -48,5 +48,12 @@ namespace Expense_Tracker
             creidtcardsWindow.Show();
             this.Close();
         }
+
+        private void LoansPage(object sender, RoutedEventArgs e)
+        {
+            Loans loansWindow = new Loans(UserFullName);
+            loansWindow.Show();
+            this.Close();
+        }
     }
 }

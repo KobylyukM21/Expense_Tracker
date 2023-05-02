@@ -16,10 +16,6 @@ using MySql.Data.MySqlClient;
 
 namespace Expense_Tracker
 {
-    /// <summary>
-    /// Interaction logic for Expenses.xaml
-    /// </summary>
-
     public class ExpenseItem
     {
         public string ExpenseName { get; set; }

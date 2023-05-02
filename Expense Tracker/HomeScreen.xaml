@@ -65,11 +65,12 @@
             Grid.Column="2"
             Grid.Row="0"
             Style="{StaticResource ModernButton}"
-            Content="Other"
+            Content="Loans"
             Width="100"
             Height="75"
             VerticalAlignment="Bottom"
-            HorizontalAlignment="Left"/>
+            HorizontalAlignment="Left"
+            Click="LoansPage"/>
         <Button
             Grid.Column="0"
             Grid.Row="1"
