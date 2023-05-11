@@ -159,7 +159,7 @@ namespace Expense_Tracker
             SaveExpense(expense.ExpenseName, expense.ExpenseAmount, expense.ExpenseDate);
 
             // Clear text boxes and date picker
-            ExpenseTextBox.Clear();
+            ExpenseTextBox.Clear(); 
             ExpenseAmountTextBox.Clear();
             ExpenseDateBox.SelectedDate = null;
 
@@ -201,7 +201,6 @@ namespace Expense_Tracker
                 else if (ExpensesListView.SelectedItem is ExpenseTotal selectedTotalExpense)
                 {
                     ExpensesListView.Items.Remove(selectedTotalExpense);
-                    // do whatever you need to do to delete the total expense
                 }
             }
         }
